@@ -369,7 +369,13 @@ a:hover{text-decoration:none;color:#a82432;}
 </style>
 </head>
 <body>
-  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (localStorage.getItem("luminarLogin") !== "true") {
+    window.location.href = "login.html";
+  }
+});
+</script>  
 <!-- NAVBAR -->
 <button class="logout-btn" onclick="logout()">
   <i class="fa-solid fa-right-from-bracket"></i> Logout
